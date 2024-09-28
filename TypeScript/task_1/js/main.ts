@@ -5,15 +5,22 @@ interface Teacher {
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
-  [propName: string]: any;
+  [propName: string]: any; //additional properties with any type
 }
 
-const teacher3: Teacher = {
+//Directors interface that extends Teacher
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+//Example object using Directors interface
+const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
-  fullTimeEmployee: false,
   location: 'London',
-  contract: false,
+  fullTimeEmployee: true,
+  numberOfReports: 17, //required attribute specific to Directors
 };
 
-console.log(teacher3);
+//Log the object to the console
+console.log(director1);
