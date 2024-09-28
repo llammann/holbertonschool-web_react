@@ -71,8 +71,3 @@ class StudentClass implements StudentClassInterface {
     return this.firstName;
   }
 }
-
-//Example usage of StudentClass
-const student = new StudentClass("Jane", "Doe");
-console.log(student.displayName()); //Jane
-console.log(student.workOnHomework()); //Currently working
